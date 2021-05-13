@@ -1,12 +1,11 @@
-import React from 'react'
+import React from 'react';
 
-function xf():number{
-    return 10;
-}
-export default function Paragraph(){
-    return<>
-    <p>
-        This is a paragraph {xf}
-    </p>
-    </>
-}
+const Paragraph = () => {
+    return (
+        <div>
+            This is a Paragraph.
+        </div>
+    );
+};
+
+export default Paragraph;
