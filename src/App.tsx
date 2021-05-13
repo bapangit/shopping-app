@@ -1,7 +1,7 @@
 import React from 'react'
 
 function num():string{
-    return "World !";
+    return "All";
 }
 export default function App(){
     return<>
