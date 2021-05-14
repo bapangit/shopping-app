@@ -5,7 +5,11 @@ module.exports = {
     entry: path.join(__dirname, "src", "index.tsx"),
     output: { path: path.join(__dirname, "build"), filename: "index.bundle.js" },
     mode: process.env.NODE_ENV || "development",
-    resolve: { modules: [path.resolve(__dirname, "src"), "node_modules"],extensions: [ '.ts', '.js', '.tsx', '.jsx'] },
+    resolve: { modules: [path.resolve(__dirname, "src"), "node_modules"],extensions: [ '.ts', '.js', '.tsx', '.jsx'],
+    alias: {
+      '@components': path.resolve(__dirname, 'src/components'),
+      /* '@buttons': path.resolve(__dirname, 'src/components/buttons') */
+    } },
     devServer: { contentBase: path.join(__dirname, "src"),port:8080,open:true },
     module: {
         rules: [

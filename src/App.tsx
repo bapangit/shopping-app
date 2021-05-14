@@ -1,4 +1,5 @@
-import React,{useState} from 'react'
+import React from 'react'
+import Btn from '@components/buttons/Btn'
 
 function getData(data:boolean):string{
     if(data){
@@ -7,8 +8,9 @@ function getData(data:boolean):string{
         throw new Error("Got Error.")
     }
 }
-export default function App(){
+export default function App(){ 
     return<>
     <h1 style={{color:"lightblue",textAlign:"center"}}>{getData(true)}</h1>
+    <Btn/>
     </>
 }
