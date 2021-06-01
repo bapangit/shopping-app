@@ -1,10 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import ErrorBoundary from '@components/errors/ErrorBoundary'
 import App from './App'
 
 const HelloWorld = () => {
     return (
-       <App/>
+        <ErrorBoundary>
+            <App/>
+        </ErrorBoundary>
     );
 }
 

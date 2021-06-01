@@ -1,18 +1,19 @@
-import React from 'react'
-import Btn from '@components/buttons/Btn'
-import Heading from '@components/header/Heading'
+import React, { useEffect, useState } from 'react'
 
+var b = true
 function getData(data:boolean):string{
     if(data){
-        return "Hello World"
+        return "Hello World !"
     }else{
-        throw new Error("Got Error.")
+        throw new Error("Got Error !")
     }
 }
+
 export default function App(){ 
+
+    const [scolor,setColor] = useState("lightsalmon")
+    useEffect(()=>{setInterval(()=>{b?setColor("lightsalmon"):setColor("lightblue");b=!b},1000)},[])
     return<>
-    <h1 style={{color:"lightblue",textAlign:"center"}}>{getData(true)}</h1>
-    {/* <Btn/> */}
-    <Heading/>
+    <h1 style={{color:scolor,textAlign:"center"}}>{getData(true)}</h1>
     </>
 }
